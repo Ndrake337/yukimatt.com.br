@@ -14,6 +14,9 @@ module.exports = {
         confortaa: ["var(--font-comfortaa)"],
         megrim: ["var(--font-megrim)"],
       },
+      boxShadow: {
+        "body-shadow": "0px 4px 8px 3px rgba(0, 0, 0, 0.25)",
+      },
     },
     colors: {
       "dark-gray": "#242424",

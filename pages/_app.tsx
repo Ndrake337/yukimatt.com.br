@@ -1,6 +1,7 @@
 import Head from "next/head";
 import "../styles/global.css";
 import { Comfortaa, Megrim } from "@next/font/google";
+import Header from "../components/Header";
 
 const confortaa = Comfortaa({
   subsets: ["latin-ext"],
@@ -22,7 +23,8 @@ export default function YukiMatt({ Component, pageProps }) {
       <Head>
         <title>Yuki Matt</title>
       </Head>
-      <Component {...pageProps} />
+      <Header />
+      <Component {...pageProps} className="px-48" />
     </div>
   );
 }

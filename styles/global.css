@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    margin: 0;
+    padding: 0;
+  }
   body {
     @apply bg-dark-gray;
+  }
+  main {
+    @apply mx-48 px-20 font-confortaa
   }
 }
