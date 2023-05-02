@@ -18,6 +18,9 @@ module.exports = {
         "body-shadow": "0px 4px 8px 3px rgba(0, 0, 0, 0.25)",
       },
     },
+    backgroundImage: {
+      "cover-pattern": "url('/cover.png')",
+    },
     colors: {
       "dark-gray": "#242424",
       "light-gray": "#DFDFDF",

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function PostsDisplayer() {
+export function PostsDisplayer() {
   return (
     <div className="flex flex-row gap-7 w-full ">
       <Image

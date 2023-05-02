@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+export function Header() {
   return (
     <header className="bg-black flex flex-row items-center px-64 py-6">
       <Link
@@ -19,8 +19,9 @@ export default function Header() {
       </Link>
       <menu className="font-confortaa flex flex-row ml-auto mr-10 gap-6">
         <Link href="/">Home</Link>
-        <Link href="/">Sobre Mim</Link>
+        <Link href="/sobre-mim">Sobre Mim</Link>
         <Link href="/">Portfólio</Link>
+        <Link href="/blog">Blog</Link>
         <Link href="/">Contato</Link>
       </menu>
     </header>

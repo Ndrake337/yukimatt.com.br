@@ -11,6 +11,6 @@
     @apply bg-dark-gray;
   }
   main {
-    @apply mx-48 px-20 font-confortaa
+    @apply mx-48 px-20 font-confortaa shadow-body-shadow;
   }
 }

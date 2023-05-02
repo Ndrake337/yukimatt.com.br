@@ -1,15 +1,11 @@
-import Header from "../components/Header";
-import PostsDisplayer from "../components/Posts-Displayer";
+import { About } from "../components/About";
 
-function Home() {
+export default function Home() {
   return (
-    <main className="flex flex-col items-center py-8 gap-7 shadow-body-shadow">
-      <strong className="text-3xl">
-        Bem Vindo(a) ... Veja nossos mais novos posts:
-      </strong>
-      <PostsDisplayer />
-    </main>
+    <div className="flex flex-col items-center p-8 w-full">
+      <div className=" bg-cover-pattern w-full h-screen">
+        <About />
+      </div>
+    </div>
   );
 }
-
-export default Home;
