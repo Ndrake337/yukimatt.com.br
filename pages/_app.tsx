@@ -1,6 +1,6 @@
 import Head from "next/head";
 import "../styles/global.css";
-import { Comfortaa, Megrim } from "@next/font/google";
+import { Comfortaa, Megrim } from "next/font/google";
 import { Header } from "../components/Header";
 
 const confortaa = Comfortaa({
