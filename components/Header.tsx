@@ -19,7 +19,6 @@ export function Header() {
       </Link>
       <menu className="font-confortaa flex flex-row ml-auto mr-10 gap-6">
         <Link href="/">Home</Link>
-        <Link href="/sobre-mim">Sobre Mim</Link>
         <Link href="/">Portfólio</Link>
         <Link href="/blog">Blog</Link>
         <Link href="/">Contato</Link>
