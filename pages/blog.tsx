@@ -1,6 +1,7 @@
 import { BreakIn } from "../components/Break-in";
 import { Footer } from "../components/Footer";
 import { PostsDisplayer } from "../components/Posts-Displayer";
+
 export default function Blog() {
   return (
     <main className="flex flex-col items-center py-8 gap-7 shadow-body-shadow">
