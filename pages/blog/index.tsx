@@ -1,6 +1,6 @@
-import { BreakIn } from "../components/Break-in";
-import { Footer } from "../components/Footer";
-import { PostsDisplayer } from "../components/Posts-Displayer";
+import { BreakIn } from "../../components/Break-in";
+import { Footer } from "../../components/Footer";
+import { PostsDisplayer } from "../../components/Posts-Displayer";
 
 export default function Blog() {
   return (
