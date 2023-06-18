@@ -19,9 +19,9 @@ export function Header() {
       </Link>
       <menu className="font-confortaa flex flex-row ml-auto mr-10 gap-6">
         <Link href="/">Home</Link>
-        <Link href="/">Portfólio</Link>
+        <Link href="/portfolio">Portfólio</Link>
         <Link href="/blog">Blog</Link>
-        <Link href="/">Contato</Link>
+        <Link href="/contato">Contato</Link>
       </menu>
     </header>
   );
