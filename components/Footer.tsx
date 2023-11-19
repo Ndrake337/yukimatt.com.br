@@ -15,7 +15,6 @@ export function Footer() {
         </Link>
         <menu className="font-confortaa flex flex-row ml-auto mr-10 gap-6">
           <Link href="/">Contato</Link>
-          <Link href="/sobre-mim">Sobre</Link>
           <Link
             href="https://github.com/Ndrake337/yukimatt.com.br/"
             target="_blank"
