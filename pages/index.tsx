@@ -4,9 +4,9 @@ import { Footer } from "../components/Footer";
 
 export default function SobreMim() {
   return (
-    <main className="flex flex-col gap-7">
+    <main className="flex flex-col gap-7 max-md:mx-0">
       <strong className="text-2xl mt-7 text-center">
-        Seja Bem-vendo(a) ao Yuki Matt, Minha página pessoal na internet
+        Seja Bem-vindo(a) ao Yuki Matt, Minha página pessoal na internet
       </strong>
       <About />
       <Footer />

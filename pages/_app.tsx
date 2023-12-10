@@ -24,7 +24,7 @@ export default function YukiMatt({ Component, pageProps }) {
         <title>Yuki Matt</title>
       </Head>
       <Header />
-      <Component {...pageProps} className="px-48" />
+      <Component {...pageProps} />
     </div>
   );
 }

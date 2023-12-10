@@ -25,7 +25,7 @@ export function About() {
     console.log(content);
   }, []);
   return (
-    <div className="flex flex-row gap-20 items-start py-8">
+    <div className="flex flex-row gap-20 items-start py-8 max-xl:flex-col">
       <img
         alt="Minha Foto"
         src="https://avatars.githubusercontent.com/u/58128082?v=4"
