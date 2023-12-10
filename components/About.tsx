@@ -22,7 +22,6 @@ export function About() {
 
   useEffect(() => {
     getGithubReadMeContent();
-    console.log(content);
   }, []);
   return (
     <div className="flex flex-row gap-20 items-start py-8 max-xl:flex-col">
