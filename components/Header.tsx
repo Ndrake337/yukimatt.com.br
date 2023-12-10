@@ -19,7 +19,7 @@ export function Header() {
           Yuki Matt
         </span>
       </Link>
-      <menu className="font-confortaa flex flex-row ml-auto mr-10 gap-6 max-lg:hidden">
+      <menu className="font-confortaa flex flex-row ml-auto mr-10 gap-6 max-lg:hidden flex-wrap">
         <Link href="/">Home</Link>
         <Link href="/portfolio">Portfólio</Link>
         <Link href="/blog">Blog</Link>
