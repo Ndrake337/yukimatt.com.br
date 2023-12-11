@@ -22,6 +22,7 @@ export default function YukiMatt({ Component, pageProps }) {
     >
       <Head>
         <title>Yuki Matt</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <Header />
       <Component {...pageProps} />

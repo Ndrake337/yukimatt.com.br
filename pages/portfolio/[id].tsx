@@ -11,10 +11,10 @@ export default function Projects() {
 
   useEffect(() => {
     if (router.isReady) {
-      const repoName = router.query.id;
+      const repoName = router.query.id as string;
       const fetchData = async () => {
         try {
-          const readMeContent = await getGithubReadMeContent(repoName);
+          const readMeContent: string = await getGithubReadMeContent(repoName);
           setRepoReadMe(readMeContent);
         } catch (error) {
           console.error("Erro ao obter conteúdo do GitHub:", error);
