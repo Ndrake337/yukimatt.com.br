@@ -1,27 +1,25 @@
 "use client";
 import { useEffect } from "react";
 import { useState } from "react";
-import Axios from "axios";
+
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import { getGithubReadMeContent } from "../utils/getRepoReadMe";
 
 export function About() {
   const [content, setContent] = useState("");
 
-  const getGithubReadMeContent = () => {
-    const gitHubReadMeURL =
-      "https://api.github.com/repos/Ndrake337/Ndrake337/readme";
-
-    Axios.get(gitHubReadMeURL).then((result) => {
-      const readMeContent = Buffer.from(result.data.content, "base64").toString(
-        "utf8"
-      );
-      setContent(readMeContent);
-    });
-  };
-
   useEffect(() => {
-    getGithubReadMeContent();
+    const fetchData = async () => {
+      try {
+        const readMeContent = await getGithubReadMeContent("Ndrake337");
+        setContent(readMeContent);
+      } catch (error) {
+        console.error("Erro ao obter conteúdo do GitHub:", error);
+      }
+    };
+
+    fetchData();
   }, []);
   return (
     <div className="flex flex-row gap-20 items-start py-8 max-xl:flex-col">
@@ -32,7 +30,11 @@ export function About() {
       />
       <p className="flex flex-col gap-7">
         <strong>Hello there, General Keno..., *cof cof*</strong>
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+        {content ? (
+          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+        ) : (
+          "Await"
+        )}
       </p>
     </div>
   );
