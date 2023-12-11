@@ -1,4 +1,4 @@
-import { iPostsBanner } from "../interfaces/postSummary";
+import { iPostsBanner } from "../interfaces/iPostSummary";
 
 export function PostsBanner(props: iPostsBanner) {
   return (
