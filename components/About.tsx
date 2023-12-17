@@ -13,6 +13,7 @@ export function About() {
     const fetchData = async () => {
       try {
         const readMeContent = await getGithubReadMeContent("Ndrake337");
+        console.log(readMeContent);
         setContent(readMeContent);
       } catch (error) {
         console.error("Erro ao obter conteúdo do GitHub:", error);
@@ -33,7 +34,7 @@ export function About() {
         {content ? (
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
         ) : (
-          "Await"
+          "Fetching Gihub Data"
         )}
       </p>
     </div>

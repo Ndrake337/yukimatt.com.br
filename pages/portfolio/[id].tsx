@@ -27,7 +27,13 @@ export default function Projects() {
   return (
     <main className="flex flex-col gap-7 max-md:mx-0 ">
       <div className="flex flex-col gap-7 mt-7">
-        {repoReadMe ? <ReactMarkdown>{repoReadMe}</ReactMarkdown> : "Await"}
+        {repoReadMe ? (
+          <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+            {repoReadMe}
+          </ReactMarkdown>
+        ) : (
+          "Await"
+        )}
       </div>
       <Footer />
     </main>

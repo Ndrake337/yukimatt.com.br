@@ -13,4 +13,12 @@
   main {
     @apply lg:mx-48 px-20 font-confortaa shadow-body-shadow ;
   }
+
+  #githubOnly{
+    @apply hidden;
+  }
+
+  li {
+    @apply mb-4
+  }
 }

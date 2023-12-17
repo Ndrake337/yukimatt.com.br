@@ -56,7 +56,7 @@ export default function Portfolio() {
         </strong>
       </div>
 
-      <div className="flex flex-row flex-wrap gap-7 w-full justify-center">
+      <div className="flex flex-col flex-wrap gap-7 w-full justify-center">
         {generatePageContent()}
       </div>
 

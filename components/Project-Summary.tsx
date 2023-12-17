@@ -3,10 +3,10 @@ import { iProjectSummary } from "../interfaces/iProjectSummary";
 
 export function ProjectSummary(props: iProjectSummary) {
   return (
-    <div className="basis-80 flex flex-col border-solid border rounded-lg overflow-hidden">
+    <div className="basis-80 flex flex-row lg:overflow-hidden max-lg:border max-lg:rounded-lg items-center max-lg:flex-col">
       <img
-        src="https://cdn.wallpapersafari.com/0/17/FH80mY.jpg"
-        className="w-full"
+        src={`https://raw.githubusercontent.com/Ndrake337/${props.repo.name}/main/YKM/Banner.png`}
+        className="w-2/5 xl:w-2/4 h-fit rounded-lg items-center max-lg:w-full"
       />
       <div className="flex flex-col p-7 gap-7">
         <strong className="text-xl font-bold">{props.repo.name}</strong>
