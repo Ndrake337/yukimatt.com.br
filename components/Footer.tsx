@@ -11,7 +11,7 @@ export function Footer() {
           href="/"
           className="flex flex-row gap-6 items-center ml-10 select-none"
         >
-          <img src="https://github.com/Ndrake337/yukimatt.com.br/blob/main/public/Logo-Fill.svg" />
+          <img src="https://raw.githubusercontent.com/Ndrake337/yukimatt.com.br/main/public/Logo-Fill.svg" />
         </Link>
         <menu className="font-confortaa flex flex-row ml-auto mr-10 gap-6">
           <Link href="/">Contato</Link>
