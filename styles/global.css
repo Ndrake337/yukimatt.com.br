@@ -11,7 +11,7 @@
     @apply bg-dark-gray;
   }
   main {
-    @apply lg:mx-48 px-20 font-confortaa shadow-body-shadow ;
+    @apply lg:mx-40 px-20 font-confortaa shadow-body-shadow ;
   }
 
   #githubOnly{
