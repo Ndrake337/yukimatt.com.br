@@ -12,7 +12,7 @@ export function Header() {
           width="0"
           height="0"
           className="w-24 h-24 max-lg:w-16"
-          src="/logo.svg"
+          src="https://raw.githubusercontent.com/Ndrake337/yukimatt.com.br/main/public/Logo.svg"
           alt="Logo Do Site"
         />
         <span className="font-megrim text-4xl max-lg:text-3xl select-none">
