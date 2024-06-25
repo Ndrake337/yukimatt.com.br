@@ -43,7 +43,7 @@ export default function Home() {
             Caso goste dos projetos e currículo apresentados nesse portfólio,
             <strong>entre em contato</strong> por meio das opções abaixo.
           </p>
-          <div className="flex justify-between pt-2">
+          <div className="flex justify-between pt-2 flex-wrap">
             <TextButton name="Email" href="mailto:matheus.felipe337@gmail.com" color="pink"><Mail /></TextButton>
             <TextButton name="Linkedin" href="https://www.linkedin.com/in/matheus-felipe-neves/" color="blue"><Linkedin /></TextButton>
             <TextButton name="Github" href="https://github.com/Ndrake337" color="dark"><Github /></TextButton>
@@ -69,20 +69,21 @@ export default function Home() {
             })
             }
           </Tabs.List>
-          {Knowledge.map((item) => {
-            return (<Tabs.Content value={item.Area} key={item.Area} className="bg-zinc-400 w-screen -mx-8 px-8 py-1 flex flex-row gap-8 justify-center flex-wrap ">
-              {item.Skills.map((skill) => {
-                return (
-                <div key={skill.Name} className="flex flex-row items-center gap-2 my-1 p-2 bg-zinc-200/25 rounded-lg w-32 truncate cursor-pointer">
-                  <Image width={28} height={28} src={skill.Icon} className="rounded-full" alt={`Icone do Conhecimento ${skill.Name}`}/>
-                  <span>{skill.Name}</span>
-                </div>
-                )
-              })}
-            </Tabs.Content>)
-          })
-          }
-
+          <div className="bg-zinc-400 -mx-8 px-8 py-1 gap-8 justify-center">
+            {Knowledge.map((item) => {
+              return (<Tabs.Content value={item.Area} key={item.Area}>
+                {item.Skills.map((skill) => {
+                  return (
+                    <div key={skill.Name} className="flex flex-row items-center gap-2 my-1 p-2 bg-zinc-200/25 rounded-lg w-32 truncate cursor-pointer">
+                      <Image width={28} height={28} src={skill.Icon} className="rounded-full" alt={`Icone do Conhecimento ${skill.Name}`} />
+                      <span>{skill.Name}</span>
+                    </div>
+                  )
+                })}
+              </Tabs.Content>)
+            })
+            }
+          </div>
         </Tabs.Root>
       </ContentWrapper>
 
@@ -90,7 +91,7 @@ export default function Home() {
 
       <ContentWrapper id="Dobra-3">
         <Title>Projetos em Destaque</Title>
-        <img src="https://raw.githubusercontent.com/Ndrake337/Star-Wars-Space-Invaders/main/YKM/Banner.png" className="rounded-lg shadow-md"/>
+        <img src="https://raw.githubusercontent.com/Ndrake337/Star-Wars-Space-Invaders/main/YKM/Banner.png" className="rounded-lg shadow-md" />
         <div className="flex flex-1 flex-col gap-4">
           <h2>StarWars Space Invaders</h2>
           <p>Projeto visa a construção de um jogo simples para pratica do paradigma de orientação a objetos utilizando LibGDX. Com ela pode-se desenvolver jogos simples renderizados em arquivos .jar</p>

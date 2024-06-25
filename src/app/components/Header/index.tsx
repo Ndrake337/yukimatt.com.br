@@ -9,7 +9,7 @@ import Link from "next/link";
 export function Header() {
 
   return (
-    <div className="bg-white flex justify-center items-center px-8 border-b-2 border-zinc-500 shadow-sm">
+    <div className="bg-white flex justify-center items-center px-8 border-b-2 border-zinc-500 shadow-sm w-screen">
       <div></div>
       <Link href="/"><Logo /></Link>
       <Dialog.Root>
