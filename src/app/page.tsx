@@ -43,7 +43,7 @@ export default function Home() {
             Caso goste dos projetos e currículo apresentados nesse portfólio,
             <strong>entre em contato</strong> por meio das opções abaixo.
           </p>
-          <div className="flex justify-between pt-2 flex-wrap">
+          <div className="flex justify-between pt-2 gap-2 flex-wrap">
             <TextButton name="Email" href="mailto:matheus.felipe337@gmail.com" color="pink"><Mail /></TextButton>
             <TextButton name="Linkedin" href="https://www.linkedin.com/in/matheus-felipe-neves/" color="blue"><Linkedin /></TextButton>
             <TextButton name="Github" href="https://github.com/Ndrake337" color="dark"><Github /></TextButton>
@@ -57,7 +57,7 @@ export default function Home() {
       <ContentWrapper id="Dobra-2">
         <Title>Conhecimentos</Title>
         <Tabs.Root defaultValue={Knowledge[0].Area}>
-          <Tabs.List className="flex flex-row gap-9 items-center justify-center">
+          <Tabs.List className="flex gap-4 items-center justify-center w-full">
             {Knowledge.map((item) => {
               return (
                 <Tabs.Trigger value={item.Area} asChild key={item.Area}>
@@ -69,7 +69,7 @@ export default function Home() {
             })
             }
           </Tabs.List>
-          <div className="bg-zinc-400 -mx-8 px-8 py-1 gap-8 w-screen">
+          <div className="bg-zinc-400 px-8 py-1 gap-8 w-screen">
             {Knowledge.map((item) => {
               return (<Tabs.Content value={item.Area} key={item.Area}>
                 {item.Skills.map((skill) => {

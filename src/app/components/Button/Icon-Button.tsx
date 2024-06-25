@@ -43,7 +43,7 @@ export function IconButton({variant, subtitle, className, children,...props}: Bu
   const {button, icon, subtitleText } = buttonSlots({variant})
   
   return ( 
-    <button {...props} className="flex flex-col items-center group">
+    <button {...props} className="flex flex-col items-center group min-w-16">
       <div className={button()}>
         <div className={icon()}>
           {children}
