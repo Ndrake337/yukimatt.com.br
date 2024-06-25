@@ -69,7 +69,7 @@ export default function Home() {
             })
             }
           </Tabs.List>
-          <div className="bg-zinc-400 -mx-8 px-8 py-1 gap-8 justify-center">
+          <div className="bg-zinc-400 -mx-8 px-8 py-1 gap-8 w-screen">
             {Knowledge.map((item) => {
               return (<Tabs.Content value={item.Area} key={item.Area}>
                 {item.Skills.map((skill) => {
