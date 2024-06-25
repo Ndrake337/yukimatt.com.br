@@ -26,9 +26,15 @@ export function Header() {
               <Dialog.Title className="p-2">Selecione para onde quer ir: </Dialog.Title>
               <Division />
               <div className="flex flex-col mt-1">
-                <Link href="/" className="p-2 hover:bg-zinc-400/20 rounded-lg">Home</Link>
-                <Link href="/Portfolio" className="p-2 hover:bg-zinc-400/20 rounded-lg">Portfolio</Link>
-                <Link href="/Blog" className="p-2 hover:bg-zinc-400/20 rounded-lg">Blog</Link>
+                <Dialog.Close asChild>
+                  <Link href="/" className="p-2 hover:bg-zinc-400/20 rounded-lg">Home</Link>
+                </Dialog.Close>
+                <Dialog.Close asChild>
+                  <Link href="/Portfolio" className="p-2 hover:bg-zinc-400/20 rounded-lg">Portfolio</Link>
+                </Dialog.Close>
+                <Dialog.Close asChild>
+                  <Link href="/Blog" className="p-2 hover:bg-zinc-400/20 rounded-lg">Blog</Link>
+                </Dialog.Close>
               </div>
               <Dialog.Close asChild>
                 <button className="text-zinc-500 absolute top-3 right-3 inline-flex h-6 w-6 items-center justify-center rounded-full" aria-label="Close">
