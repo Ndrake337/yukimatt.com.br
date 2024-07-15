@@ -8,12 +8,35 @@ import { IconButton } from "./components/Button/Icon-Button";
 import * as Tabs from '@radix-ui/react-tabs';
 import { TextButton } from "./components/Button/Text-Button";
 import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { RepositoryShower, RepositoryShowerProps } from "./components/RepositoryShower/RepositoryShower";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
+  const [repoData, setRepoData] = useState<RepositoryShowerProps>()
   const currentDate = new Date();
   const birthDate = new Date(1999, 5, 1);
   var diff = Math.abs(currentDate.getTime() - birthDate.getTime());
   var age = Math.trunc(Math.ceil(diff / (1000 * 3600 * 24)) / 365);
+
+  useEffect(() => {
+    const fetchRepoData = async () => {
+      try {
+        const response = await axios.get('https://api.github.com/repos/Ndrake337/Star-Wars-Space-Invaders')
+        console.log(response);
+        
+        setRepoData({
+          title: response?.data.name,
+          description: response?.data.description,
+          tech: response?.data.language
+        })
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchRepoData();
+  }
+    , [])
 
   return (
     <div className="space-y-4">
@@ -91,15 +114,7 @@ export default function Home() {
 
       <ContentWrapper id="Dobra-3">
         <Title>Projetos em Destaque</Title>
-        <img src="https://raw.githubusercontent.com/Ndrake337/Star-Wars-Space-Invaders/main/YKM/Banner.png" className="rounded-lg shadow-md" />
-        <div className="flex flex-1 flex-col gap-4">
-          <h2>StarWars Space Invaders</h2>
-          <p>Projeto visa a construção de um jogo simples para pratica do paradigma de orientação a objetos utilizando LibGDX. Com ela pode-se desenvolver jogos simples renderizados em arquivos .jar</p>
-          <div className="flex justify-between">
-            <span className="rounded-full border border-blue-700 bg-blue-550 p-1.5 text-zinc-200 min-w-16 w-fit text-center cursor-pointer">Java</span>
-            <a className="rounded-full border-2 border-zinc-500 p-1.5" href="https://github.com/Ndrake337/Star-Wars-Space-Invaders">Ler Mais</a>
-          </div>
-        </div>
+        <RepositoryShower title={repoData?.title} description={repoData?.description} tech={repoData?.tech}/>
       </ContentWrapper>
       <div />
     </div>
