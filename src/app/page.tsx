@@ -56,7 +56,7 @@ export default function Home() {
 
           <p>
             Olá, Meu Nome é <strong>Matheus Felipe</strong>, tenho {age} anos, e
-            atuo na área de programação desde 2020, meus foco principal é na
+            atuo na área de programação desde 2020, meu foco principal é na
             área de desenvolvimento <strong>back-end</strong> mas tenho
             conhecimentos e experiencias atuando com <strong>Front-end</strong>,
             <strong>Analytics</strong> e <strong>Engenharia de dados</strong>.
