@@ -3,6 +3,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { ContentWrapper } from "../components/ContentWrapper"
 import { RepositoryShower, RepositoryShowerProps } from "../components/RepositoryShower/RepositoryShower"
+import { countedOut } from "../assets/countedout";
 
 export default function Portfolio() {
   const [repos, setRepos] = useState<RepositoryShowerProps[]>()
@@ -13,7 +14,7 @@ export default function Portfolio() {
         const response = await axios.get('https://api.github.com/users/Ndrake337/repos')
         const repoList = response.data.sort((a:any,b:any) => {
           return new Date(b.updated_at).valueOf() - new Date(a.updated_at).valueOf()
-        }).map((repo: any) => {
+        }).filter((item:any) => !countedOut.includes(item.name)).map((repo: any) => {
           return({
             title: repo.name,
             description: repo.description,
