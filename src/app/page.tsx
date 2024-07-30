@@ -117,7 +117,11 @@ export default function Home() {
           <div className="w-screen gap-8 bg-zinc-400 px-8 py-1">
             {Knowledge.map((item) => {
               return (
-                <Tabs.Content value={item.Area} key={item.Area}>
+                <Tabs.Content
+                  value={item.Area}
+                  key={item.Area}
+                  className="grid grid-cols-2"
+                >
                   {item.Skills.map((skill) => {
                     return (
                       <div
