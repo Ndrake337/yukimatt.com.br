@@ -4,6 +4,9 @@ const config: Config = {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      borderRadius: {
+        inherit: "inherit",
+      },
       gridTemplateRows: {
         app: "4rem 1fr 4rem",
       },

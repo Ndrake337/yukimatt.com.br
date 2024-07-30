@@ -1,7 +1,38 @@
+import { ContentWrapper } from "../assets/components/ContentWrapper";
+import { Category } from "../assets/components/Category";
+import { categories } from "../assets/categories";
+import { Division } from "../assets/components/Division";
+import { TextButton } from "../assets/components/Button/Text-Button";
+import { ChevronRight, SquareChevronRight } from "lucide-react";
+
 interface PortfolioProps {}
 
 export default function Blog() {
-  return ( 
-    <h1>Blog</h1>
-  )
+  return (
+    <ContentWrapper>
+      <div className="flex flex-row flex-wrap gap-3">
+        {categories.map((category) => {
+          return (
+            <Category name={category.name} key={category.name}>
+              {<category.icon />}
+            </Category>
+          );
+        })}
+      </div>
+      <div className="relative mb-4 cursor-pointer rounded-t-lg bg-zinc-50 shadow-lg">
+        <span className="absolute left-3 top-4 rounded-full bg-slate-50 px-3 py-1 shadow-md">
+          Filmes e Séries
+        </span>
+        <img
+          src="https://i.pinimg.com/originals/70/06/e0/7006e0d0d1c53bf5fbbe8d7cbd6f1b8a.jpg"
+          alt="teste"
+          className="rounded-inherit"
+        />
+        <div className="flex flex-col gap-1 p-4">
+          <strong>title</strong>
+          <span>a short description of the post</span>
+        </div>
+      </div>
+    </ContentWrapper>
+  );
 }
