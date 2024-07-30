@@ -1,8 +1,11 @@
 'use client'
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { ContentWrapper } from "../components/ContentWrapper"
-import { RepositoryShower, RepositoryShowerProps } from "../components/RepositoryShower/RepositoryShower"
+import { ContentWrapper } from "../assets/components/ContentWrapper";
+import {
+  RepositoryShower,
+  RepositoryShowerProps,
+} from "../assets/components/RepositoryShower/RepositoryShower";
 import { countedOut } from "../assets/countedout";
 
 export default function Portfolio() {

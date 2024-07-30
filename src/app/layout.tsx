@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { Division } from "./components/Division";
+import { Header } from "./assets/components/Header";
+import { Footer } from "./assets/components/Footer";
 
 export const metadata: Metadata = {
   title: "Yuki Matt",

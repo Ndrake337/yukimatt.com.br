@@ -1,14 +1,17 @@
 'use client'
 import Image from "next/image";
-import { Title } from "./components/Title";
-import { ContentWrapper } from "./components/ContentWrapper";
-import { Division } from "./components/Division";
+import { Title } from "./assets/components/Title";
+import { ContentWrapper } from "./assets/components/ContentWrapper";
+import { Division } from "./assets/components/Division";
 import { Knowledge } from "./assets/knowledge";
-import { IconButton } from "./components/Button/Icon-Button";
-import * as Tabs from '@radix-ui/react-tabs';
-import { TextButton } from "./components/Button/Text-Button";
+import { IconButton } from "./assets/components/Button/Icon-Button";
+import * as Tabs from "@radix-ui/react-tabs";
+import { TextButton } from "./assets/components/Button/Text-Button";
 import { FileText, Github, Linkedin, Mail } from "lucide-react";
-import { RepositoryShower, RepositoryShowerProps } from "./components/RepositoryShower/RepositoryShower";
+import {
+  RepositoryShower,
+  RepositoryShowerProps,
+} from "./assets/components/RepositoryShower/RepositoryShower";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
