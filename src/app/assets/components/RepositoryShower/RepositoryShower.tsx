@@ -20,7 +20,7 @@ export function RepositoryShower({title, description, tech}: RepositoryShowerPro
           <Tags>{tech}</Tags>
 
           <a
-            className="rounded-full border-2 border-zinc-500 p-1.5"
+            className="rounded-full border-2 border-zinc-500 p-1.5 dark:border-zinc-200"
             href={`https://github.com/Ndrake337/${title}`}
             target="_blank"
           >

@@ -33,9 +33,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <div className="grid grid-rows-app w-screen h-screen text-zinc-500 antialiased font-roboto font-normal">
+        <div className="grid h-screen w-screen grid-rows-app font-roboto font-normal text-zinc-500 antialiased dark:text-zinc-200">
           <Header />
-          <main className="bg-zinc-100 px-8 pt-4 w-screen">{children}</main>
+          <main className="w-screen bg-zinc-100 px-8 pt-4 dark:bg-zinc-800">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

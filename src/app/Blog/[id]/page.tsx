@@ -27,7 +27,7 @@ export default function Post() {
       <div className="absolute left-0 h-96 w-full bg-slate-600" />
 
       <main
-        className={`shadow-top relative -mx-8 mt-4 h-screen rounded-t-2xl bg-white p-4 ${top <= 112 ? "overflow-scroll" : ""} space-y-2`}
+        className={`relative -mx-8 mt-4 h-screen rounded-t-2xl bg-zinc-100 p-4 shadow-top dark:bg-zinc-800 ${top <= 112 ? "overflow-scroll" : ""} space-y-2`}
         style={{ top: `${top}px` }}
       >
         {/* header */}

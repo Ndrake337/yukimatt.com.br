@@ -114,7 +114,7 @@ export default function Home() {
               );
             })}
           </Tabs.List>
-          <div className="w-screen gap-8 bg-zinc-400 px-8 py-1">
+          <div className="w-screen gap-8 bg-zinc-400 px-8 py-1 dark:bg-zinc-900">
             {Knowledge.map((item) => {
               return (
                 <Tabs.Content
@@ -126,7 +126,7 @@ export default function Home() {
                     return (
                       <div
                         key={skill.Name}
-                        className="my-1 flex w-32 cursor-pointer flex-row items-center gap-2 truncate rounded-lg bg-zinc-200/25 p-2"
+                        className="my-1 flex w-32 cursor-pointer flex-row items-center gap-2 truncate rounded-lg bg-zinc-200/25 p-2 dark:bg-zinc-50/25"
                       >
                         <Image
                           width={28}

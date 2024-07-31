@@ -19,8 +19,8 @@ export default function Blog() {
           );
         })}
       </div>
-      <div className="relative mb-4 cursor-pointer rounded-t-lg bg-zinc-50 shadow-lg">
-        <span className="absolute left-3 top-4 rounded-full bg-slate-50 px-3 py-1 shadow-md">
+      <div className="relative mb-4 cursor-pointer rounded-t-lg bg-zinc-50 shadow-lg dark:bg-zinc-700">
+        <span className="absolute left-3 top-4 rounded-full bg-zinc-50 px-3 py-1 shadow-md dark:bg-zinc-700">
           Filmes e Séries
         </span>
         <img
