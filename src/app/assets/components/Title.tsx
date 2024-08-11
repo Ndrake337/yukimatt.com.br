@@ -5,5 +5,5 @@ interface TitleProps {
 }
 
 export function Title({ children }: TitleProps) {
-  return <span className="text-2xl font-rajdhani font-medium">{children}</span>;
+  return <span className="text-2xl font-rajdhani font-medium lg:mb-10">{children}</span>;
 }

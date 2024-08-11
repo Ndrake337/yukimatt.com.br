@@ -45,55 +45,56 @@ export default function Home() {
     <div className="space-y-4">
       <ContentWrapper id="Dobra-1">
         <Title>Bem Vindo(a) ao Yuki Matt</Title>
-        <div className="flex h-40 w-40 flex-col items-center justify-center rounded-full border-2 border-zinc-500">
-          <Image
-            width={144}
-            height={144}
-            src="https://github.com/ndrake337.png"
-            alt="Picture of the author"
-            className="h-36 w-36 rounded-full"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <p>Hello there, General Keno..., *cof cof*</p>
+        <div className="flex flex-col items-center gap-8 lg:max-w-[900px] lg:flex-row">
+          <div className="flex h-40 w-40 flex-col items-center justify-center rounded-full border-2 border-zinc-500 lg:h-4/5 lg:w-4/5">
+            <img
+              src="https://github.com/ndrake337.png"
+              alt="Picture of the author"
+              className="h-36 w-36 rounded-full lg:h-full lg:w-full"
+            />
+          </div>
+          <div className="flex flex-col gap-2 lg:gap-4">
+            <p>Hello there, General Keno..., *cof cof*</p>
 
-          <p>
-            Olá, Meu Nome é <strong>Matheus Felipe</strong>, tenho {age} anos, e
-            atuo na área de programação desde 2020, meu foco principal é na área
-            de desenvolvimento <strong>back-end</strong> mas tenho conhecimentos
-            e experiencias atuando com <strong>Front-end</strong>,
-            <strong>Analytics</strong> e <strong>Engenharia de dados.</strong>.
-          </p>
+            <p>
+              Olá, Meu Nome é <strong>Matheus Felipe</strong>, tenho {age} anos,
+              e atuo na área de programação desde 2020, meu foco principal é na
+              área de desenvolvimento <strong>back-end</strong> mas tenho
+              conhecimentos e experiencias atuando com{" "}
+              <strong>Front-end</strong>,<strong>Analytics</strong> e{" "}
+              <strong>Engenharia de dados.</strong>.
+            </p>
 
-          <p>
-            Caso goste dos projetos e currículo apresentados nesse portfólio,
-            <strong>entre em contato</strong> por meio das opções abaixo.
-          </p>
-          <div className="flex flex-wrap justify-between gap-2 pt-2">
-            <TextButton
-              name="Email"
-              href="mailto:matheus.felipe337@gmail.com"
-              color="pink"
-            >
-              <Mail />
-            </TextButton>
-            <TextButton
-              name="Linkedin"
-              href="https://www.linkedin.com/in/matheus-felipe-neves/"
-              color="blue"
-            >
-              <Linkedin />
-            </TextButton>
-            <TextButton
-              name="Github"
-              href="https://github.com/Ndrake337"
-              color="dark"
-            >
-              <Github />
-            </TextButton>
-            <TextButton name="Curriculo" href="#">
-              <FileText />
-            </TextButton>
+            <p>
+              Caso goste dos projetos e currículo apresentados nesse portfólio,
+              <strong>entre em contato</strong> por meio das opções abaixo.
+            </p>
+            <div className="flex flex-wrap justify-between gap-2 pt-2 lg:pt-4">
+              <TextButton
+                name="Email"
+                href="mailto:matheus.felipe337@gmail.com"
+                color="pink"
+              >
+                <Mail />
+              </TextButton>
+              <TextButton
+                name="Linkedin"
+                href="https://www.linkedin.com/in/matheus-felipe-neves/"
+                color="blue"
+              >
+                <Linkedin />
+              </TextButton>
+              <TextButton
+                name="Github"
+                href="https://github.com/Ndrake337"
+                color="dark"
+              >
+                <Github />
+              </TextButton>
+              <TextButton name="Curriculo" href="#">
+                <FileText />
+              </TextButton>
+            </div>
           </div>
         </div>
       </ContentWrapper>
@@ -103,7 +104,7 @@ export default function Home() {
       <ContentWrapper id="Dobra-2">
         <Title>Conhecimentos</Title>
         <Tabs.Root defaultValue={Knowledge[0].Area}>
-          <Tabs.List className="flex w-full items-center justify-center gap-4">
+          <Tabs.List className="flex w-full items-center justify-center gap-4 lg:gap-20">
             {Knowledge.map((item) => {
               return (
                 <Tabs.Trigger value={item.Area} asChild key={item.Area}>
@@ -114,13 +115,13 @@ export default function Home() {
               );
             })}
           </Tabs.List>
-          <div className="w-screen gap-8 bg-zinc-400 px-8 py-1 dark:bg-zinc-900">
+          <div className="mt-auto w-screen gap-8 bg-zinc-400 px-72 py-1 dark:bg-zinc-900 lg:h-full lg:py-12">
             {Knowledge.map((item) => {
               return (
                 <Tabs.Content
                   value={item.Area}
                   key={item.Area}
-                  className="grid grid-cols-2"
+                  className="grid grid-cols-2 justify-items-center lg:grid-cols-3 lg:gap-y-2"
                 >
                   {item.Skills.map((skill) => {
                     return (

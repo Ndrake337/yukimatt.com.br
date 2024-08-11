@@ -5,5 +5,5 @@ interface ContentWrapperProps extends ComponentProps<"div"> {
 }
 
 export function ContentWrapper({ children }: ContentWrapperProps) {
-  return <div className="flex flex-col items-center gap-4">{children}</div>;
+  return <div className="flex flex-col items-center gap-4 lg:py-12">{children}</div>;
 }

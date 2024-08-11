@@ -8,13 +8,15 @@ export interface RepositoryShowerProps {
 
 export function RepositoryShower({title, description, tech}: RepositoryShowerProps){
   return (
-    <div>
+    <div className="flex flex-col justify-items-stretch gap-8 lg:grid lg:max-h-80 lg:max-w-[1200px] lg:grid-cols-2 lg:py-5">
       <img
         src={`https://raw.githubusercontent.com/Ndrake337/${title}/main/YKM/Banner.png`}
-        className="rounded-lg shadow-md"
+        className="rounded-lg shadow-md w-fit"
       />
       <div className="flex flex-1 flex-col gap-4">
-        <strong className="mt-4 text-lg">{title?.replaceAll("-", " ")}</strong>
+        <strong className="mt-4 text-lg lg:text-2xl">
+          {title?.replaceAll("-", " ")}
+        </strong>
         <p>{description}</p>
         <div className="flex justify-between">
           <Tags>{tech}</Tags>
