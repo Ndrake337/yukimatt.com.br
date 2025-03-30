@@ -115,13 +115,13 @@ export default function Home() {
               );
             })}
           </Tabs.List>
-          <div className="mt-auto w-screen gap-8 bg-zinc-400 px-72 py-1 dark:bg-zinc-900 lg:h-full lg:py-12">
+          <div className="mt-auto gap-8 w-screen bg-zinc-400 py-1 dark:bg-zinc-900 lg:h-full lg:py-12">
             {Knowledge.map((item) => {
               return (
                 <Tabs.Content
                   value={item.Area}
                   key={item.Area}
-                  className="grid grid-cols-2 justify-items-center lg:grid-cols-3 lg:gap-y-2"
+                  className="grid grid-cols-2 justify-items-center lg:grid-cols-3 lg:gap-y-2 "
                 >
                   {item.Skills.map((skill) => {
                     return (
